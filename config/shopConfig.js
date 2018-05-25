@@ -1,5 +1,5 @@
 let shopConfig={};
-shopConfig.port="3000";
+shopConfig.port="3001";
 shopConfig.allowedCorsOrigin="*";
 shopConfig.env="dev";
 shopConfig.db={

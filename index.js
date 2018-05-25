@@ -55,7 +55,7 @@ app.use(globalErrorMiddleware.globalNotFoundHandler)
 //listening port and establishing database connection
 app.listen(shopConfig.port, () => {
     
-    console.log('Example app listening on port 3000!');
+    console.log('Example app listening on port 3001!');
     let db=mongoose.connect(shopConfig.db.uri);
 
 });//end connection part

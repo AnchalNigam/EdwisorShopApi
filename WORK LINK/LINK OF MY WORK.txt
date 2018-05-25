@@ -1,0 +1,4 @@
+authToken is Admin
+
+Repo link:
+https://github.com/AnchalNigam/EdwisorShopApi

@@ -162,7 +162,8 @@ let setRouter = (app) => {
     */
 
     //Edit category
-    app.put(`${baseUrl}/category/:catId/edit`, auth.isAuthenticated, categoryController.editCategory);
+   /*  app.put(`${baseUrl}/category/:catId/edit`, auth.isAuthenticated, categoryController.editCategory); */
+   app.put(`${baseUrl}/category/:categoryId/edit`, categoryController.updateFunction);
     //end edit category
 
     /**
@@ -235,7 +236,7 @@ let setRouter = (app) => {
 	 */
 
 
-
+ 
 
 }//end setrouter function
 

@@ -182,6 +182,59 @@ let editCategory = (req, res) => {
 
 }//end edit category
 
+let updateCategoryFunction = (req,res)=>{
+
+    let options = req.body;
+    
+    console.log(options)
+    console.log(req.params.categoryId)
+    categoryModel.update({ 'categoryId': req.params.categoryId }, options, { multi: true })
+    .exec((err, result) => {
+    
+    if (err) {
+    
+     
+    
+    console.log('Error Occured.')
+    
+    logger.error(`Error Occured : ${err}`, 'Database', 10)
+    
+    let apiResponse = response.generate(true, 'Error Occured.', 500, null)
+    
+    res.send(apiResponse)
+    
+     
+    
+    } else if (check.isEmpty(result) || result.nModified == 0 ) {
+    
+     
+    
+    console.log('Category Not edited')
+    
+    //logger.info('No category is edited', 'Category Controller: editCategory', 5)
+    
+    let apiResponse = response.generate(true, "No category is edited!", 404, null);
+    
+    console.log(result)
+    
+    res.send(apiResponse)
+    
+    } else {
+    
+    console.log('Category Edited Successfully')
+    
+    //logger.info('Category Edited Successfully!', 'Category Controller: editCategory', 10)
+    
+    let apiResponse = response.generate(false, "Category Edited successfully!", 200, result);
+    
+    res.send(apiResponse);
+    
+    }
+    
+    });
+    
+    }
+
 //function to delete category
 let deleteCategory=(req,res)=>{
     if (check.isEmpty(req.params.catId)) {
@@ -222,6 +275,7 @@ module.exports = {
     getAllCategory: getAllCategory,
     viewSingleCategory: viewSingleCategory,
     editCategory: editCategory,
-    deleteCategory:deleteCategory
+    deleteCategory:deleteCategory,
+    updateFunction:updateCategoryFunction
 
 }
