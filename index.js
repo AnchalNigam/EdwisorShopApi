@@ -1,5 +1,6 @@
 //Import
 const express = require('express');
+const path = require('path');
 const shopConfig=require('./config/shopConfig');
 const mongoose=require('./node_modules/mongoose');
 const fs=require('fs');
@@ -7,6 +8,7 @@ const cookieParser = require('./node_modules/cookie-parser');
 const bodyParser = require('./node_modules/body-parser');
 const globalErrorMiddleware = require('./middleware/errorHandler');
 const routeLoggerMiddleware = require('./middleware/routeLogger');
+
 const helmet = require('helmet');
 //import end
 
@@ -23,7 +25,8 @@ app.use(helmet());
 
 app.use(globalErrorMiddleware.globalErrorHandler);
 app.use(routeLoggerMiddleware.logIp);
-
+app.use('/edwisorShopDoc',express.static(path.join(__dirname, 'edwisorShopDoc')));
+app.use('/',express.static(path.join(__dirname, 'readme')));
 
 // Bootstrap models
 let modelsPath = './models'
