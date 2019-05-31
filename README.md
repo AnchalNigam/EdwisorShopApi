@@ -4,4 +4,3 @@ the edwisorShop documentation).
 
 Language: ExpressJs, MongoDb, NodeJs.
 
-Documentation Link: http://edwisorshopapi.webdeveloperjourney.xyz/edwisorShopDoc/
