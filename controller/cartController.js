@@ -17,7 +17,7 @@ const productModel = mongoose.model('product');
 
 
 //function to add product in a carttt
-let addProduct=(req,res)=>{
+let addProduct=(req,res)=>{ //chnge
     let addingProductFunction = () => {
         return new Promise((resolve, reject) => {
             if (check.isEmpty(req.body.productId)) {
