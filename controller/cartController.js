@@ -46,7 +46,7 @@ let addProduct=(req,res)=>{ //chnge
                         let apiResponse = response.generate(true, "Error Occured!", 500, null);
                         reject(apiResponse)
                     } else {
-                        logger.info(`Adding product to cart Successful!`, 'Cart Controller: addProduct', 10);
+                        logger.info(`Adding product to cart Successfullllll!`, 'Cart Controller: addProduct', 10);
                         let apiResponse = response.generate(false, "Adding product to cart successful!", 200, result);
                         resolve(apiResponse);
 
