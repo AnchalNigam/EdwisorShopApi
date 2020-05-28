@@ -16,7 +16,7 @@ const productModel = mongoose.model('product');
 
 
 
-//function to add product in a cart
+//function to add product in a carttt
 let addProduct=(req,res)=>{
     let addingProductFunction = () => {
         return new Promise((resolve, reject) => {
