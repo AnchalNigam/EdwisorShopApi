@@ -22,7 +22,7 @@ let addProduct=(req,res)=>{ //chnge
         return new Promise((resolve, reject) => {
             if (check.isEmpty(req.body.productId)) {
 
-                console.log("403, forbidden request");
+                console.log("403, forbidden");
                 logger.error(`Error Occured : Required Parameters are missing!`, 'Cart Controller: addProduct', 10);
                 let apiResponse = response.generate(true, 'Required parameters are missing', 403, null)
                 reject(apiResponse);
