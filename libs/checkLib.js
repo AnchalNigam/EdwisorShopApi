@@ -6,6 +6,7 @@ let trim = (x) => {
   
   //checking vallue is null,undefined,empty or not
   let isEmpty = (value) => {
+    
     if (value === null || value === undefined || trim(value) === '' || value.length === 0) {
       return true
     } else {
