@@ -47,7 +47,7 @@ let addProduct=(req,res)=>{ //chnge
                         reject(apiResponse)
                     } else {
                         logger.info(`Adding product to cart successss!`, 'Cart Controller: addProduct', 10);
-                        let apiResponse = response.generate(false, "Adding product to cart successful!", 200, result);
+                        let apiResponse = response.generate(false, "Adding product to cart successful!!!", 200, result);
                         resolve(apiResponse);
 
                     }
