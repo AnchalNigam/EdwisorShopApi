@@ -319,7 +319,7 @@ let viewProductBySubcategory=(req,res)=>{
                 let apiResponse = response.generate(true, "No product Found!", 404, null);
                 res.send(apiResponse)
             } else {
-                logger.info('All product Found Successfully! conflict remote', 'product Controller: viewSingleProduct remote conflicting', 10)
+                logger.info('All product Found Successfully!', 'product Controller: viewSingleProduct conflicting local', 10)
                 let apiResponse = response.generate(false, "All Product of specific SubCategory Found successfully local conflict!", 200, result);
                 res.send(apiResponse);
 
