@@ -134,7 +134,7 @@ let viewProductCart=(req,res)=>{
                
               
                 logger.info('All Products of your cart!', 'Cart Controller: viewProductCart', 10)
-                let apiResponse = response.generate(false, "All Products of your cart Found successfully fr se changing!", 200, result);
+                let apiResponse = response.generate(false, "All Products of your cart Found successfully ab fr se!", 200, result);
                 res.send(apiResponse);
                 
             }
