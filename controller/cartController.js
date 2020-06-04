@@ -80,7 +80,7 @@ let deleteProductCart=(req,res)=>{
     if (check.isEmpty(req.params.cartId)) {
 
         console.log('cart Id should be passed')
-        let apiResponse = response.generate(true, 'CartId is missing', 403, null)
+        let apiResponse = response.generate(true, 'CartId master change is missing', 403, null)
         res.send(apiResponse);
     }
     else{

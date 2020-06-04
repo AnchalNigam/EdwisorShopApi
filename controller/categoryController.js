@@ -77,7 +77,7 @@ let getAllCategory = (req, res) => {
         .exec((err, result) => {
             if (err) {
                 console.log(err)
-                logger.error(`Error Occured : ${err}`, 'Database', 10)
+                logger.error(`Error Occured : ${err}`, 'Database master change', 10)
                 let apiResponse = response.generate(true, "Server Error: Failed to find all Category details!", 500, null);
                 res.send(apiResponse);
             } else if (check.isEmpty(result)) {
