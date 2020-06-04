@@ -239,7 +239,7 @@ let deleteSubcategory=(req,res)=>{
              res.send(apiResponse)
          } else {
              logger.info('SubCategory Deleted Successfully!', 'subcategory Controller: deleteSubcategory',5)
-             let apiResponse=response.generate(false,"SubCategory Deleted successfully!",200,null);
+             let apiResponse=response.generate(false,"SubCategory Deleted successfully! remote conflict",200,null);
              res.send(apiResponse)
      
          }
