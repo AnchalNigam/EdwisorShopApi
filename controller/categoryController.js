@@ -260,7 +260,7 @@ let deleteCategory=(req,res)=>{
              res.send(apiResponse)
          } else {
              logger.info('Category Found Successfully!', 'category Controller: deleteCategory',5)
-             let apiResponse=response.generate(false,"Category Deleted successfully woo!",200,null);
+             let apiResponse=response.generate(false,"Category Deleted successfully woo changing it again!",200,null);
              res.send(apiResponse)
      
          }
