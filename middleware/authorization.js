@@ -4,7 +4,7 @@
 const logger = require('./../libs/loggerLib')
 const response = require('./../libs/responseLib')
 const check = require('./../libs/checkLib')
-//end import
+//end importing
 
 
 let isAuthenticated = (req, res, next) => {
