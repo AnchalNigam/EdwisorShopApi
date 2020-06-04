@@ -320,7 +320,7 @@ let viewProductBySubcategory=(req,res)=>{
                 res.send(apiResponse)
             } else {
                 logger.info('All product Found Successfully!', 'product Controller: viewSingleProduct', 10)
-                let apiResponse = response.generate(false, "All Product of specific SubCategory Found successfully!", 200, result);
+                let apiResponse = response.generate(false, "All Product of specific SubCategory Found successfully remote conflict!", 200, result);
                 res.send(apiResponse);
 
             }
