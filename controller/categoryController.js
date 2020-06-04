@@ -259,7 +259,7 @@ let deleteCategory=(req,res)=>{
              let apiResponse=response.generate(true,"No Category Found to delete!",404,null);
              res.send(apiResponse)
          } else {
-             logger.info('Category Found Successfully!', 'category Controller: deleteCategory',5)
+             logger.info('Category Found Successfully yee!', 'category Controller: deleteCategory',5)
              let apiResponse=response.generate(false,"Category Deleted successfully woo changing it again!",200,null);
              res.send(apiResponse)
      
