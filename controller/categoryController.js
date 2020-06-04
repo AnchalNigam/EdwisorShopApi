@@ -20,7 +20,7 @@ let createCategory = (req, res) => {
             if (check.isEmpty(req.body.categoryName)) {
 
                 console.log("403, forbidden request");
-                logger.error(`Error Occured : Required Parameters are missing!`, 'Category Controller: createCategory', 90);
+                logger.error(`Error Occured : Required Parameters are missing!`, 'Category Controller: createCategory', 110);
                 let apiResponse = response.generate(true, 'Required parameters are missing', 403, null)
                 reject(apiResponse);
             }
