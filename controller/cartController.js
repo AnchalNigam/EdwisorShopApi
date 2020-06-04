@@ -133,7 +133,7 @@ let viewProductCart=(req,res)=>{
             } else {
                
               
-                logger.info('All Products of your cart!', 'Cart Controller: viewProductCart', 10)
+                logger.info('All Products of your cart local change!', 'Cart Controller: viewProductCart', 10)
                 let apiResponse = response.generate(false, "All Products of your cart Found successfully ab fr se!", 200, result);
                 res.send(apiResponse);
                 
