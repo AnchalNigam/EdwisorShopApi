@@ -255,7 +255,7 @@ let deleteCategory=(req,res)=>{
             
          } else if (result.n == 0) {
              console.log('No Category Founddddd')
-             logger.info('No Category Found', 'Category Controller: deleteCategory',5)
+             logger.info('No Category Found', 'Category Controllerrrrrr: deleteCategory',5)
              let apiResponse=response.generate(true,"No Category Found to delete!",404,null);
              res.send(apiResponse)
          } else {
