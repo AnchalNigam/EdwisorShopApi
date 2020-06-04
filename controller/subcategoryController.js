@@ -204,7 +204,7 @@ let editSubcategory=(req,res)=>{
                 } else {
                     console.log('SubCategory Edited Successfully')
                     logger.info('SubCategory Edited Successfully!', 'subcategory Controller: editSubcategory', 10)
-                    let apiResponse = response.generate(false, "SubCategory Edited successfully!", 200, null);
+                    let apiResponse = response.generate(false, "SubCategory Edited successfully local change 1!", 200, null);
                     
                     res.send(apiResponse);
                 }
